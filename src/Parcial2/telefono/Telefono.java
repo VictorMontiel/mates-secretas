@@ -1,0 +1,49 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package Parcial2.telefono;
+
+/**
+ *
+ * @author Paco
+ */
+public class Telefono {
+
+    public BotonApagar EA = new BotonApagar();
+    Tecla[][] Teclado = new Tecla[5][3];
+
+    public void setTeclado() {
+        int dig = 0;
+        for (int i = 0; i < Teclado.length - 1; i++) {
+            for (int j = 0; j < Teclado[0].length; j++) {
+                dig++;
+                String di = String.valueOf(dig);
+                Tecla temp = new Tecla();
+                char d = di.charAt(0);
+                temp.setdigito(d);
+                Teclado[i][j] = temp;
+            }
+        }
+        Tecla temp = new Tecla();
+        Tecla temp2 = new Tecla();
+        Tecla temp3 = new Tecla();
+        Tecla temp4 = new Tecla();
+        Tecla temp5 = new Tecla();
+        Tecla temp6 = new Tecla();
+
+        temp.setdigito('x');
+        Teclado[3][0] = temp;
+        temp2.setdigito('0');
+        Teclado[3][1] = temp2;
+        temp3.setdigito('#');
+        Teclado[3][2] = temp3;
+        temp4.setdigito('C');
+        Teclado[4][0] = temp4;
+        temp5.setdigito('S');
+        Teclado[4][1] = temp5;
+        temp6.setdigito('T');
+        Teclado[4][2] = temp6;
+    }
+}
