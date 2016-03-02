@@ -28,6 +28,12 @@ public class SistemaTelefono {
                 }
             }
         }
+        Telefono.agregarContacto();
+        Telefono.agregarContacto();
+        Telefono.mostrarContacto(1);
+        Telefono.mostrarContacto(2);
+        Telefono.mostrarContacto(3);
+        Telefono.desplegarAgenda();
         }
     }
     

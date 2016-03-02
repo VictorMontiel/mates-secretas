@@ -13,7 +13,8 @@ public class Telefono {
 
     public BotonApagar EA = new BotonApagar();
     Tecla[][] Teclado = new Tecla[5][3];
-
+    static Contacto [] Agenda = new Contacto[100];
+static int i =0;
     public void setTeclado() {
         int dig = 0;
         for (int i = 0; i < Teclado.length - 1; i++) {
@@ -45,5 +46,34 @@ public class Telefono {
         Teclado[4][1] = temp5;
         temp6.setdigito('T');
         Teclado[4][2] = temp6;
+    }
+    public static void agregarContacto(){
+        if (i==Agenda.length-1) {
+            System.out.println("Lo sentimos la Agenda ya está llena");
+        }else{
+            Contacto nuevo = new Contacto();
+            Agenda[i]= nuevo;
+            i++;
+        }
+    }
+    public static void mostrarContacto(int n){
+        if (n>100) {
+            System.out.println("El contacto #"+n+" no existe");    
+        }
+        if (Agenda[n-1]!=null) {
+            System.out.println("El contacto #"+n);
+            Agenda[n-1].imprimirContacto();
+        }else{
+            System.out.println("El contacto #"+n+" no existe");
+        }
+        
+    }
+    public static void desplegarAgenda(){
+        for (int j = 0; j < Agenda.length; j++) {
+            if (Agenda[j]!=null) {
+                System.out.println("El contacto número: "+(j+1));
+                Agenda[j].imprimirContacto();
+            }
+        }
     }
 }
