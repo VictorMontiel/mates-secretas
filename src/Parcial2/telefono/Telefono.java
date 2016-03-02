@@ -48,7 +48,7 @@ static int i =0;
         Teclado[4][2] = temp6;
     }
     public static void agregarContacto(){
-        if (i==Agenda.length-1) {
+        if (i==Agenda.length) {
             System.out.println("Lo sentimos la Agenda ya está llena");
         }else{
             Contacto nuevo = new Contacto();
