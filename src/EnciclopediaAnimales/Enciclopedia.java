@@ -22,7 +22,10 @@ public class Enciclopedia {
     static int oii = 0;
     static int ii = 0;
     static int mi = 0;
-
+/**
+ * el metodo nueva entrada permite crear una entrada nueva a la enciclopedia
+ * creando un nuevo mamífero, insecto, otro vertebrado u otro invertebrado
+ */
     public void nuevaEntrada() {
         System.out.println("\n ¿Qué tipo de animal desea añadir a la lista? \n 1:Mamífero \n 2:Insecto \n 3:Vertebrado \n 4:Invertebrado");
         String ta = es.nextLine();

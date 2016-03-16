@@ -11,8 +11,11 @@ import java.util.Scanner;
  *
  * @author Paco
  */
+
 public abstract class Animal implements iAnimal {
+    
 Scanner es = new Scanner (System.in);
+
     protected String nombre;
     protected String respiracion;
     protected String ubicacion;
@@ -22,6 +25,9 @@ Scanner es = new Scanner (System.in);
     protected String sangre;
     protected String clasificacion;
     
+    /**
+     * get datos es un método que tiene todos los métodos para asignar las propiedades
+     */
     public void getDatos(){
         getClasificacion();
         getNombre();
@@ -32,6 +38,7 @@ Scanner es = new Scanner (System.in);
         getParidad();
         getSangre();
     }
+    
     public void getClasificacion(){
         if (this.clasificacion==null) {
             System.out.println("Escriba la clasificación de su animal");

@@ -59,7 +59,9 @@ public class SistemaEnciclopedia {
             }
         }
     }
-
+/**
+ * los métodos permiten poner entradas y mostrar las estradas ya puestas
+ */
     public static void entradasEspecíficas() {
         System.out.println("\n1.Ver Mamíferos");
         System.out.println("2.Ver Insectos");
